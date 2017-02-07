@@ -471,6 +471,8 @@ Ship = function () {
       SFX.explosion();
       Game.explosionAt(other.x, other.y);
       Game.FSM.state = 'player_died';
+      this.color = 'yellow';
+      this.solid = true;
       this.visible = false;
       this.currentNode.leave(this);
       this.currentNode = null;
