@@ -471,8 +471,6 @@ Ship = function () {
       SFX.explosion();
       Game.explosionAt(other.x, other.y);
       Game.FSM.state = 'player_died';
-      this.color = 'yellow';
-      this.solid = true;
       this.visible = false;
       this.currentNode.leave(this);
       this.currentNode = null;
@@ -724,6 +722,9 @@ Coin = function () {
               0,  5,
               5,  0,
               0, -5]);
+
+  this.color = 'yellow';
+  this.solid = true;
 
   this.collidesWith = ["ship"];
 
